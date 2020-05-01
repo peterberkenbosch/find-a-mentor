@@ -23,7 +23,8 @@
     "react-tippy": "^1.2.3",
     "react-toastify": "^5.3.2",
     "styled-components": "^5.0.0-beta.8",
-    "svg-country-flags": "^1.2.6"
+    "svg-country-flags": "^1.2.6",
+    "snyk": "^1.316.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,7 +40,9 @@
     "test:e2e": "is-ci \"test:e2e:run\" \"test:e2e:dev\"",
     "pretest:e2e:run": "yarn run build",
     "test:e2e:run": "start-server-and-test start http://localhost:3000 cy:run",
-    "test:e2e:dev": "start-server-and-test start http://localhost:3000 cy:open"
+    "test:e2e:dev": "start-server-and-test start http://localhost:3000 cy:open",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -69,5 +72,6 @@
     "prettier": "1.18.2",
     "start-server-and-test": "^1.9.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
